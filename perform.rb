@@ -36,7 +36,7 @@ def all_images
 end 
 
 def usage
-  print_info "\nUsage: #{$0}\n\nResult:\n[+] renamed 5 pictures\n\n" 
+  print_info "\nUsage: #{$0}\n\nResult:\n\n[+] processed 5 pictures\n\n" 
   exit
 end 
 
