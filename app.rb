@@ -2,4 +2,8 @@
 
 require_relative './collage_proccessor.rb'
 
-CollageProccessor.new
+def app_args
+  ARGV.first
+end
+
+CollageProccessor.new(app_args)
