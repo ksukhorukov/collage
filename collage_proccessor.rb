@@ -50,7 +50,7 @@ class  CollageProccessor
   end 
 
   def mask
-    .*{jpeg,jpg,png}
+    "*.{jpeg,jpg,png}"
   end 
 
   def all_images
