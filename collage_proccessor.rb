@@ -51,8 +51,12 @@ class  CollageProccessor
 
   def rename(file_name, n)
     Dir.chdir(absolute_dir_path) do 
-      File.rename(file_name, rand(100_000_000_000).to_s + File.extname(file_name))
+      File.rename(file_name, new_file_name + File.extname(file_name))
     end
+  end
+
+  def new_file_name
+    rand(100_000_000_000).to_s
   end
 
   def remove_metadata(file_name)
