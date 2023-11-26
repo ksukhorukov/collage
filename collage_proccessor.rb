@@ -15,7 +15,7 @@ class  CollageProccessor
 
     @counter  = perform
 
-    print_info("\n[+] processed #{counter} pictures\n")
+    print_info("\n[+] Processed #{counter} pictures\n")
   end 
 
   def perform
@@ -32,10 +32,10 @@ class  CollageProccessor
   end 
 
   def self.usage(exit_flow: true)
-    puts "\nUsage:\n\nExecute without params to proccess local folder:".colorize(color: :green, mode: :bold)
-    puts "Usage: #{$0}\n\n".colorize(color: :green, mode: :bold)
-    puts "Pass absolute or relative path of a directory with images:".colorize(color: :green, mode: :bold)
-    puts "Usage: #{$0} /var/www/sherevo/fotki\n\n".colorize(color: :green, mode: :bold)
+    puts "\nUsage:\n\nExecute without params to proccess local folder:".colorize(color: :green)
+    puts "Usage: #{$0}\n\n".colorize(color: :green)
+    puts "Pass absolute or relative path of a directory with images:".colorize(color: :green)
+    puts "Usage: #{$0} /var/www/sherevo/fotki\n\n".colorize(color: :green)
 
     exit if exit_flow
   end 
@@ -45,7 +45,7 @@ class  CollageProccessor
   def print_info(str = '', color = :green)
     raise 'empty info' if str == nil
 
-    puts str.colorize(color: color.to_sym, mode: :bold)
+    puts str.colorize(color: color&.to_sym)
   end
 
   def rename(file_name, n)
@@ -69,7 +69,7 @@ class  CollageProccessor
   end
 
   def dir_path_does_not_exist_error
-    puts "\n\nError: #{absolute_dir_path} does not exist\n\n".colorize(:red)
+    puts "\n\nError: #{absolute_dir_path} does not exist\n\n".colorize(color: :red)
     exit
   end
 
@@ -84,7 +84,7 @@ class  CollageProccessor
   end 
 
   def usage
-    print_info "\nUsage: #{$0}\n\nResult:\n\n[+] processed 5 pictures\n\n" 
+    print_info "\nUsage: #{$0}\n\nResult:\n\n[+] Processed 5 pictures\n\n" 
     exit
   end 
 
@@ -105,6 +105,6 @@ class  CollageProccessor
   end
 
   def no_pictures_found_message
-    print_info("[-] No pictures found at #{absolute_dir_path}", :red)
+    print_info("[-] Error: No pictures found at #{absolute_dir_path}\n", :red)
   end 
 end 
