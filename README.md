@@ -1,7 +1,7 @@
 # COLLAGE
 
 
-**collage** is a commande line tool that removes all metadata from the pictures in custom folder and also
+**collage** is a commande line tool that removes all metadata (geolocation, phone model, etc.) from the pictures in custom folder and also
 normalize names of the files, in other words massivelly renames all files using only number in ascending order
 
 ## Requirements
