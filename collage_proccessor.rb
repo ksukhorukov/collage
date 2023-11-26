@@ -59,7 +59,7 @@ class  CollageProccessor
   end 
 
   def absolute_dir_path 
-    @absolute_dir_path ||= File.expand_path(dir_path) + '/'
+    File.expand_path(dir_path) + '/'
   end 
 
   def mask
