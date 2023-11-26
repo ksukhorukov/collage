@@ -1,3 +1,6 @@
+.DS_Store
+help/*
+usage__/*
 *.jpeg
 *.jpg
 *.png
