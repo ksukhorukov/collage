@@ -38,7 +38,7 @@ You can see the reference using ``help`` command
 But let's suppose that you also have the directory with the name ``help`` in your local directory that you want to process:
 
 ```
- % ./app.rb help   
+% time ./app.rb help                                   
 
 You have 'help' or 'usage__' directories in local directory or even both.
 Maybe you wanted to get some help? Here it is...
@@ -57,6 +57,8 @@ HELP command alternative: ./app.rb usage__
 
 
 [+] Processed 20 pictures
+
+./app.rb help  2.14s user 0.21s system 94% cpu 2.507 total
 
 ```
 
