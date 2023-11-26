@@ -12,7 +12,7 @@ normalize names of the files, in other words massivelly renames all files using 
 ## Usage 
 
 ```
-% ./app.rb ./images 
+% ./collage.rb ./images 
 
 [+] processed 5 pictures
 ```
@@ -38,27 +38,27 @@ You can see the reference using ``help`` command
 But let's suppose that you also have the directory with the name ``help`` in your local directory that you want to process:
 
 ```
-% time ./app.rb help                                   
+% time ./collage.rb help                                   
 
 You have 'help' or 'usage__' directories in local directory or even both.
 Maybe you wanted to get some help? Here it is...
 
 Execute programm without any params to proccess local folder:
 
-Example: ./app.rb
+Example: ./collage.rb
 
 
 Pass absolute or relative path of a directory with images:
 
-Example: ./app.rb /var/www/щерево/fotki
+Example: ./collage.rb /var/www/щерево/fotki
 
 
-HELP command alternative: ./app.rb usage__
+HELP command alternative: ./collage.rb usage__
 
 
 [+] Processed 20 pictures
 
-./app.rb help  2.14s user 0.21s system 94% cpu 2.507 total
+./collage.rb help  2.14s user 0.21s system 94% cpu 2.507 total
 
 ```
 
