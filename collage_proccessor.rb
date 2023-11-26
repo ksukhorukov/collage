@@ -8,6 +8,8 @@ class  CollageProccessor
   def initialize(dir_path = '.')
     @dir_path = dir_path || '.'
 
+    check_dir_path_existance!
+
     no_pictures_found?
     non_empty_counter?
 
@@ -29,13 +31,13 @@ class  CollageProccessor
     counter
   end 
 
-  def self.usage
-    puts "\n\nExecute without params to proccess local folder:".colorize(color: :green, mode: :bold)
+  def self.usage(exit_flow: true)
+    puts "\nUsage:\n\nExecute without params to proccess local folder:".colorize(color: :green, mode: :bold)
     puts "Usage: #{$0}\n\n".colorize(color: :green, mode: :bold)
     puts "Pass absolute or relative path of a directory with images:".colorize(color: :green, mode: :bold)
     puts "Usage: #{$0} /var/www/sherevo/fotki\n\n".colorize(color: :green, mode: :bold)
 
-    exit
+    exit if exit_flow
   end 
 
   private 
@@ -61,6 +63,15 @@ class  CollageProccessor
   def absolute_dir_path 
     File.expand_path(dir_path) + '/'
   end 
+
+  def check_dir_path_existance!
+    dir_path_does_not_exist_error && exit unless Dir.exist?(absolute_dir_path)
+  end
+
+  def dir_path_does_not_exist_error
+    puts "\n\nError: #{absolute_dir_path} does not exist\n\n".colorize(:red)
+    exit
+  end
 
   def mask
     "*.{jpeg,jpg,png}"
