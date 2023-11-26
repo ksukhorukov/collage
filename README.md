@@ -20,7 +20,7 @@ normalize names of the files, in other words massivelly renames all files using 
 Results:
 
 ```
- % ls -lah ./images
+ % ls -la ./images
 total 22008
 drwxr-xr-x   8 user  staff   256B Nov 26 08:18 .
 drwxr-xr-x  11 user  staff   352B Nov 26 08:18 ..
