@@ -24,7 +24,6 @@ Results:
 total 22008
 drwxr-xr-x   8 user  staff   256B Nov 26 08:18 .
 drwxr-xr-x  11 user  staff   352B Nov 26 08:18 ..
--rw-r--r--@  1 user  staff   6.0K Nov 26 08:09 .DS_Store
 -rw-r--r--@  1 user  staff   2.1M Nov 26 06:02 1.jpeg
 -rw-r--r--@  1 user  staff   3.1M Nov 26 06:02 2.jpeg
 -rw-r--r--@  1 user  staff   2.8M Nov 26 06:02 3.jpeg
@@ -34,5 +33,15 @@ drwxr-xr-x  11 user  staff   352B Nov 26 08:18 ..
 
 ## HELP
 
+```
+ % ./app.rb help
+
+Execute programm without any params to proccess local folder:
+
+Example: ./app.rb
 
 
+Pass absolute or relative path of a directory with images:
+
+Example: ./app.rb /var/www/щерево/fotki
+```

@@ -31,13 +31,13 @@ class  CollageProccessor
     counter
   end 
 
-  def self.usage
-    puts "\nUsage:\n\nExecute without params to proccess local folder:".colorize(color: :green)
-    puts "Usage: #{$0}\n\n".colorize(color: :green)
+  def self.usage(_exit: true)
+    puts "\nExecute programm without any params to proccess local folder:".colorize(color: :green)
+    puts "\nExample: #{$0}\n\n".colorize(color: :green)
     puts "Pass absolute or relative path of a directory with images:".colorize(color: :green)
-    puts "Usage: #{$0} /var/www/sherevo/fotki\n\n".colorize(color: :green)
+    puts "\nExample: #{$0} /var/www/щерево/fotki\n".colorize(color: :green)
 
-    exit
+    exit if _exit
   end 
 
   private 
@@ -69,7 +69,7 @@ class  CollageProccessor
   end
 
   def dir_path_does_not_exist_error
-    puts "\n\nError: #{absolute_dir_path} does not exist\n\n".colorize(color: :red)
+    puts "\nError: #{absolute_dir_path} does not exist\n".colorize(color: :red)
     exit
   end
 

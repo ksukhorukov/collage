@@ -33,15 +33,24 @@ module CommandLineArguments
     Dir.exist? 'usage__'
   end
 
+  def both_nodes_exist?
+    help_node_exist? && usage_node_exist?
+  end
+
   def hint
     help_node_exist? ? 'usage__' : 'help'
   end
 
-  def special_node_detection_message
-    puts "\n#{first_arg} filenode detected. Reference can be requested in this way:\n #{$0} #{hint}\n\n".colorize(:light_blue)
-    puts "But here is the reference anyway....\n".colorize(:light_blue)
+  def existing_special_node_name
+    return "Both 'help' and 'usage__'" if help_node_exist? && usage_node_exist?
+    return 'help' if help_node_exist?
+    return 'usage__' if usage_node_exist?
+  end
 
-    ::CollageProccessor.usage
+  def special_node_detection_message
+    puts "\nYou have 'help' or 'usage__' directories in local directory or even both.\nMaybe you wanted to get some help? Here it is...".colorize(:light_blue)
+
+    ::CollageProccessor.usage(_exit: false)
     
     false
   end
