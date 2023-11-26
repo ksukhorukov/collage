@@ -29,6 +29,15 @@ class  CollageProccessor
     counter
   end 
 
+  def self.usage
+    puts "\n\nExecute without params to proccess local folder:".colorize(color: :green, mode: :bold)
+    puts "Usage: #{$0}\n\n".colorize(color: :green, mode: :bold)
+    puts "Pass absolute or relative path of a directory with images:".colorize(color: :green, mode: :bold)
+    puts "Usage: #{$0} /var/www/sherevo/fotki\n\n".colorize(color: :green, mode: :bold)
+
+    exit
+  end 
+
   private 
 
   def print_info(str = '', color = :green)
