@@ -41,7 +41,7 @@ module CommandLineArguments
     puts "\n#{first_arg} filenode detected. Reference can be requested in this way:\n #{$0} #{hint}\n\n".colorize(:light_blue)
     puts "But here is the reference anyway....\n".colorize(:light_blue)
 
-    ::CollageProccessor.usage(exit_flow: false)
+    ::CollageProccessor.usage
     
     false
   end

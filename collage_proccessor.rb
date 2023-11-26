@@ -31,13 +31,13 @@ class  CollageProccessor
     counter
   end 
 
-  def self.usage(exit_flow: true)
+  def self.usage
     puts "\nUsage:\n\nExecute without params to proccess local folder:".colorize(color: :green)
     puts "Usage: #{$0}\n\n".colorize(color: :green)
     puts "Pass absolute or relative path of a directory with images:".colorize(color: :green)
     puts "Usage: #{$0} /var/www/sherevo/fotki\n\n".colorize(color: :green)
 
-    exit if exit_flow
+    exit
   end 
 
   private 
