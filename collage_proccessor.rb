@@ -38,11 +38,15 @@ class  CollageProccessor
   end
 
   def rename(file_name, n)
-   File.rename(file_name, n.to_s + File.extname(file_name))
+    Dir.chdir(absolute_dir_path) do 
+      File.rename(file_name, n.to_s + File.extname(file_name))
+    end
   end
 
   def remove_metadata(file_name)
-    system "exiftool -all= -overwrite_original_in_place #{file_name} > /dev/null"
+    Dir.chdir(absolute_dir_path) do 
+      system "exiftool -all= -overwrite_original_in_place #{file_name} > /dev/null"
+    end
   end 
 
   def absolute_dir_path 
@@ -54,7 +58,9 @@ class  CollageProccessor
   end 
 
   def all_images
-    Dir.glob(mask, base: absolute_dir_path)
+    Dir.chdir(absolute_dir_path) do 
+      return Dir.glob(mask)
+    end
   end 
 
   def usage
@@ -66,9 +72,15 @@ class  CollageProccessor
     exit unless @counter.nil?
   end 
 
+  def images_found? 
+    all_images.size.positive?
+  end 
+
   def no_pictures_found?
-    all_images.count.zero?
+    return false if images_found?
+
     no_pictures_found_message
+
     exit
   end
 
