@@ -1,0 +1,6 @@
+*.jpeg
+*.jpg
+*.png
+./*/*.jpeg
+./*/*.jpg
+./*/*.png

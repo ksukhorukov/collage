@@ -53,9 +53,9 @@ PLATFORMS
 
 DEPENDENCIES
   colorize (~> 1.1)
-  pry
+  pry (~> 0.14.2)
   rspec (~> 3.5)
-  rubocop (~> 1.43)
+  rubocop (~> 1.57, >= 1.57.2)
 
 BUNDLED WITH
    2.2.3
