@@ -33,8 +33,15 @@ drwxr-xr-x  11 user  staff   352B Nov 26 08:18 ..
 
 ## HELP
 
+You can see the reference using ``help`` command
+
+But let's suppose that you also have the directory with the name ``help`` in your local directory that you want to process:
+
 ```
- % ./app.rb help
+ % ./app.rb help   
+
+You have 'help' or 'usage__' directories in local directory or even both.
+Maybe you wanted to get some help? Here it is...
 
 Execute programm without any params to proccess local folder:
 
@@ -44,4 +51,13 @@ Example: ./app.rb
 Pass absolute or relative path of a directory with images:
 
 Example: ./app.rb /var/www/щерево/fotki
+
+
+HELP command alternative: ./app.rb usage__
+
+
+[+] Processed 20 pictures
+
 ```
+
+As you can see it is also possible.

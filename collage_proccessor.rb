@@ -36,6 +36,7 @@ class  CollageProccessor
     puts "\nExample: #{$0}\n\n".colorize(color: :green)
     puts "Pass absolute or relative path of a directory with images:".colorize(color: :green)
     puts "\nExample: #{$0} /var/www/щерево/fotki\n".colorize(color: :green)
+    puts "\nHELP command alternative: #{$0} usage__\n".colorize(color: :green)
 
     exit if _exit
   end 
